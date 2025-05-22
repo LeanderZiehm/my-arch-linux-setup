@@ -45,7 +45,7 @@ source ~/.zshrc
 # echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ## zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
 
 
 ### 4. Clone personal repositories
