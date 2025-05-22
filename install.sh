@@ -17,11 +17,35 @@ makepkg -si --noconfirm
 yay -S --noconfirm&#x20;
 google-chrome&#x20;
 visual-studio-code-bin&#x20;
-
-
-# flameshot
+# obsidian
 # gnome-tweaks&#x20;
 
+## setup git
+# git config --global user.name "Leander"
+# git config --global user.email "leo@leo.com"
+
+### miniconda 
+# mkdir -p ~/miniconda3
+# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+# bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+# rm ~/miniconda3/miniconda.sh
+
+# source ~/miniconda3/bin/activate
+
+### alias 
+
+echo "alias remove-package='sudo pacman -Rsn'" >> ~/.zshrc 
+echo "alias conda-activate='source ~/miniconda3/bin/activate'" >> ~/.zshrc 
+source ~/.zshrc
+
+### shortcuts
+### zsh
+# yay zsh 
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+# echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+## zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 ### 4. Clone personal repositories
@@ -57,8 +81,4 @@ visual-studio-code-bin&#x20;
 
 ### 7. Set desktop background
 
-# gsettings set org.gnome.desktop.background picture-uri "file://\$HOME/Pictures/wallpaper.png"
-
-### 8. Final cleanup
-
-# echo "Arch setup complete! Log out and back in to see GNOME changes."
+gsettings set org.gnome.desktop.background picture-uri "https://drive.google.com/file/d/1DADrXXzxugbyE30mQJhFUTvi-8LAmUyy/view?usp=sharing"
