@@ -53,21 +53,23 @@ git clone [https://github.com/](https://github.com/)<username>/dotfiles.git || (
 cd "\$HOME/Projects/dotfiles"
 ./install.sh  # assume your dotfiles repo has its own installer
 
-### 6. GNOME configuration
+### 6. GNOME keyboard shortcuts
 
-# Set favorite apps
+# Define the base path for custom keybindings
+BASE_KEY="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+KEY_NAME="custom0"
+FULL_KEY="$BASE_KEY/$KEY_NAME/"
 
-gsettings set org.gnome.shell favorite-apps "\['org.gnome.Terminal.desktop', 'firefox.desktop', 'code.desktop']"
+# Set the list of custom keybindings to include only custom0
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['$FULL_KEY']"
 
-# Set keyboard shortcuts example: open terminal with Ctrl+Alt+T
+# Create the custom keybinding
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$FULL_KEY name 'terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$FULL_KEY command 'kgx'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$FULL_KEY binding '<Super>t'
 
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "\['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Terminal'
-
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
-
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Primary><Alt>t'
+# Set show-desktop shortcut
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
 ### 7. Set desktop background
 
