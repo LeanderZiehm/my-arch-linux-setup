@@ -24,6 +24,10 @@ visual-studio-code-bin&#x20;
 # git config --global user.name "Leander"
 # git config --global user.email "leo@leo.com"
 
+# git remote -v
+# ssh -T git@mygit.th-deg.de
+
+
 ### miniconda 
 # mkdir -p ~/miniconda3
 # wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
