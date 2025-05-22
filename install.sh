@@ -26,6 +26,7 @@ visual-studio-code-bin&#x20;
 
 # git remote -v
 # ssh -T git@mygit.th-deg.de
+# git remote set-url origin git@mygit.th-deg.de:ai-project-summer-25/llmano-2.git
 
 
 ### miniconda 
