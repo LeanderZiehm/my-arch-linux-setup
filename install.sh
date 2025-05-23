@@ -28,6 +28,11 @@ visual-studio-code-bin&#x20;
 # ssh -T git@mygit.th-deg.de
 # git remote set-url origin git@mygit.th-deg.de:ai-project-summer-25/llmano-2.git
 
+### node.js
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 22
 
 ### miniconda 
 # mkdir -p ~/miniconda3
