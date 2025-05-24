@@ -84,3 +84,16 @@ EOF
 cat /home/user/.ssh/id_ed25519.pub
 
 ssh -i ~/.ssh/id_ed25519 ubuntu@130.61.81.42
+
+
+
+
+
+# phone 172.24.11.44
+
+lz24349@stud.th-deg.de
+
+
+ssh u0_a58@172.24.11.44
+
+

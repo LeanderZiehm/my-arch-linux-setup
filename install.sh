@@ -20,13 +20,30 @@ visual-studio-code-bin&#x20;
 # obsidian
 # gnome-tweaks&#x20;
 
-## setup git
+### setup git
 # git config --global user.name "Leander"
 # git config --global user.email "leo@leo.com"
 
 # git remote -v
 # ssh -T git@mygit.th-deg.de
 # git remote set-url origin git@mygit.th-deg.de:ai-project-summer-25/llmano-2.git
+
+### snap 
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket
+sudo systemctl enable --now snapd.apparmor.service
+sudo ln -s /var/lib/snapd/snap /snap
+
+## install snap software
+
+# sudo snap install onenote-desktop
+
+
+# sudo ln -s /var/lib/snapd/desktop/applications /usr/share/applications/snapd
+
+
 
 ### node.js
 # Download and install nvm:
