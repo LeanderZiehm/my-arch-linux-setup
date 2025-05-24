@@ -19,6 +19,12 @@ google-chrome&#x20;
 visual-studio-code-bin&#x20;
 # obsidian
 # gnome-tweaks&#x20;
+#gitub cli
+
+
+### Aliases
+# alias gh-create='gh repo create --public --source=. --remote=origin && git push -u --all && gh browse'
+# alias dots='~/dotfiles/sync.sh'
 
 ### setup git
 # git config --global user.name "Leander"
