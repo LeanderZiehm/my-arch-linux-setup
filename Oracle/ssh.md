@@ -1,6 +1,6 @@
 # Oracle
 
-# add new ngnix endpoint:  change top and port
+ssh -i ~/.ssh/id_ed25519 ubuntu@130.61.81.42
 
 sudo vim /etc/nginx/sites-available/chatgpt-code-zip.leanderziehm.com
 
@@ -35,21 +35,32 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 5013 
 
 
+
+	
+web-change-tracker port 5014
+
+
 curl -i http://localhost:5000 : LLMANO
 curl -i http://localhost:5001 : my-hub
 curl -i http://localhost:5002 : Bookmarks
 curl -i http://localhost:5004 : timetrack.leanderziehm.com
-curl -i http://localhost:5005 : Webhooks
+curl -i http://localhost:5005 : Webhooks  ???
 curl -i http://localhost:5006 : TTS-hub
 curl -i http://localhost:5007 : notes
-curl -i http://localhost:5008 : pdf-web-app
-curl -i http://localhost:5009 : mindmap
+curl -i http://localhost:5008 : pdf-web-app ?
+curl -i http://localhost:5009 : mindmap ?
 curl -i http://localhost:5010 : lovelingo 
-curl -i http://localhost:5011 : api-web-app 
+curl -i http://localhost:5011 : api-web-app ??
 curl -i http://localhost:5012 : bayern-hackathon PDF Chat & Form Filler
 curl -i http://localhost:5013 : chatgpt-code-zip
+curl -i http://localhost:5014 : web-change-tracker
 
-curl -i http://localhost:9000 : deploy.leanderziehm.com
+curl -i http://localhost:9000 : portainer.leanderziehm.com
+curl -i http://localhost:9001 : deploy.leanderziehm.com git-deploy
 
 
-have this stored / backedup somewhere
+
+
+sudo iptables-save > ~/current-iptables.rules
+vim ~/current-iptables.rules
+sudo iptables-restore < ~/current-iptables.rules
