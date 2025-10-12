@@ -2,6 +2,8 @@
 # copy paste replace whole file
 gg -> VG -> p 
 
+duplicate line: yy 
+
 
 # useful at the start 
 Help: :WhichKey

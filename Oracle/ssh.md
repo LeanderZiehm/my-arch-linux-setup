@@ -1,5 +1,11 @@
 # Oracle
 
+
+
+sudo iptables-save > firewallnew
+vim firewallnew 
+sudo iptables-restore < firewallnew
+
 ssh -i ~/.ssh/id_ed25519 ubuntu@130.61.81.42
 
 
