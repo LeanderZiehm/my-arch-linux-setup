@@ -84,8 +84,11 @@ curl -i http://localhost:5010 : lovelingo
 curl -i http://localhost:5011 : api-web-app ??
 curl -i http://localhost:5012 : bayern-hackathon PDF Chat & Form Filler
 curl -i http://localhost:5013 : chatgpt-code-zip
-curl -i http://localhost:5014 : web-change-tracker
-curl -i http://localhost:5014 : web-change-tracker
+curl -i http://localhost:5014 : get-dynamic-image-per-request  
+curl -i http://localhost:5015 : 
+
+
+curl -i http://localhost:8001 : notifications.leanderziehm.com
 
 curl -i http://localhost:9000 : portainer.leanderziehm.com
 curl -i http://localhost:9001 : deploy.leanderziehm.com git-deploy
