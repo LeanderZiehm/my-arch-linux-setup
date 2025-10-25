@@ -6,22 +6,22 @@ With the `create-command` helper, you can turn any script into a global command 
 ---
 
 ## 🚀 Quick Setup
+First clone this repository
 
-Clone the repo and run this one-liner:
+Then run this one-liner:
 
-```bash
-mkdir -p ~/bin && ln -sf "$(realpath create-command.sh)" ~/bin/create-command && echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+```
+bash setup.sh
+``` 
+you now have `create-command` as a terminal command.
+
+if you want to automatically add all the cli commands I have you can run:
+
+```
+bash add-all-commands.sh 
 ```
 
-This will:
-
-* Create a `~/bin` directory (if it doesn’t exist).
-* Make `create-command` available globally.
-* Add `~/bin` to your shell `PATH`.
-
----
-
-## 📦 Usage
+## 📦 Manual Usage
 
 To make any script a global command:
 
@@ -57,7 +57,16 @@ setup-ngix
 
 ---
 
+
+---
+
 ## 📝 How it works
+The script will will:
+
+* Create a `~/bin` directory (if it doesn’t exist).
+* Make `create-command` available globally.
+* Add `~/bin` to your shell `PATH`.
+
 
 Linux doesn’t treat “commands” as a special category. A command is just an executable file located in a directory listed in your `$PATH` environment variable.
 
@@ -114,4 +123,23 @@ This repo takes the symlink approach because it’s **simple, non-destructive, u
 ---
 
 This kind of setup reflects the Unix philosophy: *“Write programs that do one thing well, and work together.”* Here, `create-command` does only one thing—link a script into your personal bin—but it enables you to build your own little ecosystem of tools, seamlessly integrated into your shell.
+
+
+
+
+
+
+# OLD NOTES | TODO: note to self DELETE THIS LATER PLEASE: 
+
+
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+
+mkdir -p ~/.local/bin && chmod +x ~/projects/my-arch-linux-setup/cli/setup-ngix.sh && ln -sf ~/projects/my-arch-linux-setup/cli/setup-ngix.sh ~/.local/bin/setup-ngix && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+
+
+export PATH="$HOME/my-arch-linux-setup/cli:$PATH"
+
+
+source ~/.bashrc
+chmod +x ~/my-arch-linux-setup/cli/*.sh
 
