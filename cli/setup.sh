@@ -24,11 +24,20 @@ else
     echo "~/bin already exists"
 fi
 
+# Ensure create-command.sh exists
+if [ ! -f "create-command.sh" ]; then
+    echo "Error: create-command.sh not found in current directory."
+    exit 1
+fi
+
+# Make it executable
+chmod +x create-command.sh
+
 # Link the script
 ln -sf "$(realpath create-command.sh)" "$HOME/bin/create-command"
 echo "Linked create-command.sh to ~/bin"
 
-# Add ~/bin to PATH if not already present
+# Add ~/bin to PATH in shell config if not already present
 if ! grep -Fq 'export PATH="$HOME/bin:$PATH"' "$CONFIG_FILE"; then
     echo 'export PATH="$HOME/bin:$PATH"' >> "$CONFIG_FILE"
     echo "Added ~/bin to PATH in $CONFIG_FILE"
@@ -36,6 +45,8 @@ else
     echo "~/bin already in PATH"
 fi
 
-# Reload config
-source "$CONFIG_FILE"
-echo "Reloaded $CONFIG_FILE"
+# Add ~/bin to PATH in current shell immediately
+export PATH="$HOME/bin:$PATH"
+echo "Updated PATH for current shell"
+
+echo "Setup complete! You can now run 'create-command' immediately."
