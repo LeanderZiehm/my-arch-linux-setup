@@ -50,3 +50,5 @@ export PATH="$HOME/bin:$PATH"
 echo "Updated PATH for current shell"
 
 echo "Setup complete! You can now run 'create-command' immediately."
+
+bash add-all-commands.sh
