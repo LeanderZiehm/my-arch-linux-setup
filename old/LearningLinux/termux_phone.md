@@ -1,3 +1,0 @@
-whoami
-ifconfig
-sshd
